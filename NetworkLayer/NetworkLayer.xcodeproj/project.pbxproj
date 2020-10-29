@@ -3,12 +3,26 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		0D291DC015CD738BF4192F61 /* Pods_NetworkLayerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54FDAE07FA273838C6ACB6AA /* Pods_NetworkLayerTests.framework */; };
 		3AECF6D0AC4CA7C71C67D668 /* Pods_NetworkLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46E8ED940F54196CF58DF7A3 /* Pods_NetworkLayer.framework */; };
+		E5997561254AC250004AF0D9 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5997560254AC250004AF0D9 /* BaseModel.swift */; };
+		E5997565254AC27B004AF0D9 /* OSeriesSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5997564254AC27B004AF0D9 /* OSeriesSummary.swift */; };
+		E5997569254AC2AF004AF0D9 /* OEventSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5997568254AC2AF004AF0D9 /* OEventSummary.swift */; };
+		E599756D254AC2DE004AF0D9 /* OSeriesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E599756C254AC2DE004AF0D9 /* OSeriesList.swift */; };
+		E5997571254AC330004AF0D9 /* OEventList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5997570254AC330004AF0D9 /* OEventList.swift */; };
+		E5997575254AC378004AF0D9 /* OStorySummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5997574254AC378004AF0D9 /* OStorySummary.swift */; };
+		E5997579254AC3A5004AF0D9 /* OStoryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5997578254AC3A5004AF0D9 /* OStoryList.swift */; };
+		E599757D254AC42B004AF0D9 /* OComicSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = E599757C254AC42B004AF0D9 /* OComicSummary.swift */; };
+		E5997581254AC45A004AF0D9 /* OComicList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5997580254AC45A004AF0D9 /* OComicList.swift */; };
+		E5997585254AC486004AF0D9 /* OImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5997584254AC486004AF0D9 /* OImage.swift */; };
+		E5997589254AC4BD004AF0D9 /* OUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5997588254AC4BD004AF0D9 /* OUrl.swift */; };
+		E599758D254AC4EA004AF0D9 /* OCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E599758C254AC4EA004AF0D9 /* OCharacter.swift */; };
+		E5997591254AC529004AF0D9 /* OCharacterDataContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5997590254AC529004AF0D9 /* OCharacterDataContainer.swift */; };
+		E5997595254AC553004AF0D9 /* OCharacterDataWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5997594254AC553004AF0D9 /* OCharacterDataWrapper.swift */; };
 		E5D44A32254A988E00718AEC /* NetworkLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5D44A28254A988E00718AEC /* NetworkLayer.framework */; };
 		E5D44A37254A988E00718AEC /* NetworkLayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D44A36254A988E00718AEC /* NetworkLayerTests.swift */; };
 		E5D44A39254A988E00718AEC /* NetworkLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = E5D44A2B254A988E00718AEC /* NetworkLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -29,6 +43,20 @@
 		1FEE4FD340C0370C3B699436 /* Pods-NetworkLayerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkLayerTests.release.xcconfig"; path = "Target Support Files/Pods-NetworkLayerTests/Pods-NetworkLayerTests.release.xcconfig"; sourceTree = "<group>"; };
 		46E8ED940F54196CF58DF7A3 /* Pods_NetworkLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NetworkLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		54FDAE07FA273838C6ACB6AA /* Pods_NetworkLayerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NetworkLayerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5997560254AC250004AF0D9 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		E5997564254AC27B004AF0D9 /* OSeriesSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSeriesSummary.swift; sourceTree = "<group>"; };
+		E5997568254AC2AF004AF0D9 /* OEventSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OEventSummary.swift; sourceTree = "<group>"; };
+		E599756C254AC2DE004AF0D9 /* OSeriesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSeriesList.swift; sourceTree = "<group>"; };
+		E5997570254AC330004AF0D9 /* OEventList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OEventList.swift; sourceTree = "<group>"; };
+		E5997574254AC378004AF0D9 /* OStorySummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OStorySummary.swift; sourceTree = "<group>"; };
+		E5997578254AC3A5004AF0D9 /* OStoryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OStoryList.swift; sourceTree = "<group>"; };
+		E599757C254AC42B004AF0D9 /* OComicSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OComicSummary.swift; sourceTree = "<group>"; };
+		E5997580254AC45A004AF0D9 /* OComicList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OComicList.swift; sourceTree = "<group>"; };
+		E5997584254AC486004AF0D9 /* OImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OImage.swift; sourceTree = "<group>"; };
+		E5997588254AC4BD004AF0D9 /* OUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OUrl.swift; sourceTree = "<group>"; };
+		E599758C254AC4EA004AF0D9 /* OCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCharacter.swift; sourceTree = "<group>"; };
+		E5997590254AC529004AF0D9 /* OCharacterDataContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCharacterDataContainer.swift; sourceTree = "<group>"; };
+		E5997594254AC553004AF0D9 /* OCharacterDataWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCharacterDataWrapper.swift; sourceTree = "<group>"; };
 		E5D44A28254A988E00718AEC /* NetworkLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5D44A2B254A988E00718AEC /* NetworkLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkLayer.h; sourceTree = "<group>"; };
 		E5D44A2C254A988E00718AEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -81,6 +109,27 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E599755F254AC245004AF0D9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E5997560254AC250004AF0D9 /* BaseModel.swift */,
+				E5997564254AC27B004AF0D9 /* OSeriesSummary.swift */,
+				E5997568254AC2AF004AF0D9 /* OEventSummary.swift */,
+				E599756C254AC2DE004AF0D9 /* OSeriesList.swift */,
+				E5997570254AC330004AF0D9 /* OEventList.swift */,
+				E5997574254AC378004AF0D9 /* OStorySummary.swift */,
+				E5997578254AC3A5004AF0D9 /* OStoryList.swift */,
+				E599757C254AC42B004AF0D9 /* OComicSummary.swift */,
+				E5997580254AC45A004AF0D9 /* OComicList.swift */,
+				E5997584254AC486004AF0D9 /* OImage.swift */,
+				E5997588254AC4BD004AF0D9 /* OUrl.swift */,
+				E599758C254AC4EA004AF0D9 /* OCharacter.swift */,
+				E5997590254AC529004AF0D9 /* OCharacterDataContainer.swift */,
+				E5997594254AC553004AF0D9 /* OCharacterDataWrapper.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		E5D44A1E254A988E00718AEC = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +153,7 @@
 		E5D44A2A254A988E00718AEC /* NetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
+				E599755F254AC245004AF0D9 /* Models */,
 				E5D44A2B254A988E00718AEC /* NetworkLayer.h */,
 				E5D44A2C254A988E00718AEC /* Info.plist */,
 			);
@@ -183,6 +233,7 @@
 				TargetAttributes = {
 					E5D44A27254A988E00718AEC = {
 						CreatedOnToolsVersion = 12.1;
+						LastSwiftMigration = 1210;
 					};
 					E5D44A30254A988E00718AEC = {
 						CreatedOnToolsVersion = 12.1;
@@ -294,6 +345,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5997579254AC3A5004AF0D9 /* OStoryList.swift in Sources */,
+				E5997571254AC330004AF0D9 /* OEventList.swift in Sources */,
+				E5997569254AC2AF004AF0D9 /* OEventSummary.swift in Sources */,
+				E5997575254AC378004AF0D9 /* OStorySummary.swift in Sources */,
+				E5997591254AC529004AF0D9 /* OCharacterDataContainer.swift in Sources */,
+				E5997589254AC4BD004AF0D9 /* OUrl.swift in Sources */,
+				E5997561254AC250004AF0D9 /* BaseModel.swift in Sources */,
+				E5997595254AC553004AF0D9 /* OCharacterDataWrapper.swift in Sources */,
+				E599756D254AC2DE004AF0D9 /* OSeriesList.swift in Sources */,
+				E599758D254AC4EA004AF0D9 /* OCharacter.swift in Sources */,
+				E599757D254AC42B004AF0D9 /* OComicSummary.swift in Sources */,
+				E5997565254AC27B004AF0D9 /* OSeriesSummary.swift in Sources */,
+				E5997581254AC45A004AF0D9 /* OComicList.swift in Sources */,
+				E5997585254AC486004AF0D9 /* OImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,6 +507,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F08EDD8AD076F84A1A5202D6 /* Pods-NetworkLayer.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = Y9CYE9NBLT;
@@ -460,6 +526,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -469,6 +536,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 173E6ED0816E23AB8214000D /* Pods-NetworkLayer.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = Y9CYE9NBLT;
@@ -496,6 +564,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E68CB7B92F8E402E8DF096A6 /* Pods-NetworkLayerTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y9CYE9NBLT;
 				INFOPLIST_FILE = NetworkLayerTests/Info.plist;
@@ -515,6 +584,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1FEE4FD340C0370C3B699436 /* Pods-NetworkLayerTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y9CYE9NBLT;
 				INFOPLIST_FILE = NetworkLayerTests/Info.plist;
