@@ -31,6 +31,8 @@
 		E59975BD254ACB08004AF0D9 /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59975BC254ACB08004AF0D9 /* StringExt.swift */; };
 		E59975C5254ACF31004AF0D9 /* DomainLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E59975C4254ACF31004AF0D9 /* DomainLayer.framework */; };
 		E59975C6254ACF31004AF0D9 /* DomainLayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E59975C4254ACF31004AF0D9 /* DomainLayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E59975CB254AE802004AF0D9 /* MarvelCharacterRepositoryOnlineImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59975CA254AE802004AF0D9 /* MarvelCharacterRepositoryOnlineImpl.swift */; };
+		E59975EB254AED1B004AF0D9 /* NetworkModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59975EA254AED1B004AF0D9 /* NetworkModule.swift */; };
 		E5D44A32254A988E00718AEC /* NetworkLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5D44A28254A988E00718AEC /* NetworkLayer.framework */; };
 		E5D44A37254A988E00718AEC /* NetworkLayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D44A36254A988E00718AEC /* NetworkLayerTests.swift */; };
 		E5D44A39254A988E00718AEC /* NetworkLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = E5D44A2B254A988E00718AEC /* NetworkLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -86,6 +88,8 @@
 		E59975AE254AC90F004AF0D9 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		E59975BC254ACB08004AF0D9 /* StringExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExt.swift; sourceTree = "<group>"; };
 		E59975C4254ACF31004AF0D9 /* DomainLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DomainLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E59975CA254AE802004AF0D9 /* MarvelCharacterRepositoryOnlineImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelCharacterRepositoryOnlineImpl.swift; sourceTree = "<group>"; };
+		E59975EA254AED1B004AF0D9 /* NetworkModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkModule.swift; sourceTree = "<group>"; };
 		E5D44A28254A988E00718AEC /* NetworkLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5D44A2B254A988E00718AEC /* NetworkLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkLayer.h; sourceTree = "<group>"; };
 		E5D44A2C254A988E00718AEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -188,6 +192,22 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		E59975C9254AE7DF004AF0D9 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				E59975CA254AE802004AF0D9 /* MarvelCharacterRepositoryOnlineImpl.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		E59975E9254AED12004AF0D9 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				E59975EA254AED1B004AF0D9 /* NetworkModule.swift */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
 		E5D44A1E254A988E00718AEC = {
 			isa = PBXGroup;
 			children = (
@@ -211,6 +231,8 @@
 		E5D44A2A254A988E00718AEC /* NetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
+				E59975E9254AED12004AF0D9 /* Module */,
+				E59975C9254AE7DF004AF0D9 /* Repositories */,
 				E59975BB254ACAFF004AF0D9 /* Extension */,
 				E59975A3254AC82A004AF0D9 /* Session */,
 				E5997598254AC70E004AF0D9 /* Client */,
@@ -407,6 +429,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E59975EB254AED1B004AF0D9 /* NetworkModule.swift in Sources */,
 				E5997579254AC3A5004AF0D9 /* OStoryList.swift in Sources */,
 				E59975BD254ACB08004AF0D9 /* StringExt.swift in Sources */,
 				E5997571254AC330004AF0D9 /* OEventList.swift in Sources */,
@@ -425,6 +448,7 @@
 				E5997565254AC27B004AF0D9 /* OSeriesSummary.swift in Sources */,
 				E59975AB254AC845004AF0D9 /* URLSessionImpl.swift in Sources */,
 				E599759A254AC723004AF0D9 /* EndPoint.swift in Sources */,
+				E59975CB254AE802004AF0D9 /* MarvelCharacterRepositoryOnlineImpl.swift in Sources */,
 				E5997581254AC45A004AF0D9 /* OComicList.swift in Sources */,
 				E5997585254AC486004AF0D9 /* OImage.swift in Sources */,
 			);
