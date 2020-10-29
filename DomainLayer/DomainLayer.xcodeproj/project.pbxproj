@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4BD35D6700D2CC93676F573A /* Pods_DomainLayerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 520E5A05EF2A39D5DF274490 /* Pods_DomainLayerTests.framework */; };
 		62B52463AF86ED714CD358CF /* Pods_DomainLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13DADF54209501DF4C55E111 /* Pods_DomainLayer.framework */; };
+		E59974F0254AA423004AF0D9 /* NetworkScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59974EF254AA423004AF0D9 /* NetworkScheduler.swift */; };
 		E5D44A09254A985000718AEC /* DomainLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5D449FF254A985000718AEC /* DomainLayer.framework */; };
 		E5D44A0E254A985000718AEC /* DomainLayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D44A0D254A985000718AEC /* DomainLayerTests.swift */; };
 		E5D44A10254A985000718AEC /* DomainLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = E5D44A02254A985000718AEC /* DomainLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -31,6 +32,7 @@
 		A057E15D1554305C938C0B7D /* Pods-DomainLayerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DomainLayerTests.debug.xcconfig"; path = "Target Support Files/Pods-DomainLayerTests/Pods-DomainLayerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B0F34FBF942BAFC75C22968A /* Pods-DomainLayerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DomainLayerTests.release.xcconfig"; path = "Target Support Files/Pods-DomainLayerTests/Pods-DomainLayerTests.release.xcconfig"; sourceTree = "<group>"; };
 		CD830170F108081A9C292844 /* Pods-DomainLayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DomainLayer.release.xcconfig"; path = "Target Support Files/Pods-DomainLayer/Pods-DomainLayer.release.xcconfig"; sourceTree = "<group>"; };
+		E59974EF254AA423004AF0D9 /* NetworkScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkScheduler.swift; sourceTree = "<group>"; };
 		E5D449FF254A985000718AEC /* DomainLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DomainLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5D44A02254A985000718AEC /* DomainLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DomainLayer.h; sourceTree = "<group>"; };
 		E5D44A03254A985000718AEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -81,6 +83,14 @@
 			path = ../Pods;
 			sourceTree = "<group>";
 		};
+		E59974EE254AA415004AF0D9 /* Scheduler */ = {
+			isa = PBXGroup;
+			children = (
+				E59974EF254AA423004AF0D9 /* NetworkScheduler.swift */,
+			);
+			path = Scheduler;
+			sourceTree = "<group>";
+		};
 		E5D449F5254A985000718AEC = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +114,7 @@
 		E5D44A01254A985000718AEC /* DomainLayer */ = {
 			isa = PBXGroup;
 			children = (
+				E59974EE254AA415004AF0D9 /* Scheduler */,
 				E5D44A02254A985000718AEC /* DomainLayer.h */,
 				E5D44A03254A985000718AEC /* Info.plist */,
 			);
@@ -182,6 +193,7 @@
 				TargetAttributes = {
 					E5D449FE254A985000718AEC = {
 						CreatedOnToolsVersion = 12.1;
+						LastSwiftMigration = 1210;
 					};
 					E5D44A07254A985000718AEC = {
 						CreatedOnToolsVersion = 12.1;
@@ -276,6 +288,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E59974F0254AA423004AF0D9 /* NetworkScheduler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,6 +437,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3FEA6AC103B0D7D00D14F91D /* Pods-DomainLayer.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = Y9CYE9NBLT;
@@ -442,6 +456,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -451,6 +466,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CD830170F108081A9C292844 /* Pods-DomainLayer.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = Y9CYE9NBLT;
@@ -478,6 +494,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A057E15D1554305C938C0B7D /* Pods-DomainLayerTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y9CYE9NBLT;
 				INFOPLIST_FILE = DomainLayerTests/Info.plist;
@@ -497,6 +514,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B0F34FBF942BAFC75C22968A /* Pods-DomainLayerTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y9CYE9NBLT;
 				INFOPLIST_FILE = DomainLayerTests/Info.plist;
