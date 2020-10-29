@@ -27,6 +27,8 @@
 		E59975A0254AC7AF004AF0D9 /* BaseApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E599759F254AC7AF004AF0D9 /* BaseApiClient.swift */; };
 		E59975A5254AC834004AF0D9 /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59975A4254AC834004AF0D9 /* URLSessionProtocol.swift */; };
 		E59975AB254AC845004AF0D9 /* URLSessionImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59975AA254AC845004AF0D9 /* URLSessionImpl.swift */; };
+		E59975AF254AC90F004AF0D9 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59975AE254AC90F004AF0D9 /* ApiClient.swift */; };
+		E59975BD254ACB08004AF0D9 /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59975BC254ACB08004AF0D9 /* StringExt.swift */; };
 		E5D44A32254A988E00718AEC /* NetworkLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5D44A28254A988E00718AEC /* NetworkLayer.framework */; };
 		E5D44A37254A988E00718AEC /* NetworkLayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D44A36254A988E00718AEC /* NetworkLayerTests.swift */; };
 		E5D44A39254A988E00718AEC /* NetworkLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = E5D44A2B254A988E00718AEC /* NetworkLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -65,6 +67,8 @@
 		E599759F254AC7AF004AF0D9 /* BaseApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseApiClient.swift; sourceTree = "<group>"; };
 		E59975A4254AC834004AF0D9 /* URLSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionProtocol.swift; sourceTree = "<group>"; };
 		E59975AA254AC845004AF0D9 /* URLSessionImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionImpl.swift; sourceTree = "<group>"; };
+		E59975AE254AC90F004AF0D9 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		E59975BC254ACB08004AF0D9 /* StringExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExt.swift; sourceTree = "<group>"; };
 		E5D44A28254A988E00718AEC /* NetworkLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5D44A2B254A988E00718AEC /* NetworkLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkLayer.h; sourceTree = "<group>"; };
 		E5D44A2C254A988E00718AEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -143,6 +147,7 @@
 			children = (
 				E5997599254AC723004AF0D9 /* EndPoint.swift */,
 				E599759F254AC7AF004AF0D9 /* BaseApiClient.swift */,
+				E59975AE254AC90F004AF0D9 /* ApiClient.swift */,
 			);
 			path = Client;
 			sourceTree = "<group>";
@@ -154,6 +159,14 @@
 				E59975AA254AC845004AF0D9 /* URLSessionImpl.swift */,
 			);
 			path = Session;
+			sourceTree = "<group>";
+		};
+		E59975BB254ACAFF004AF0D9 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				E59975BC254ACB08004AF0D9 /* StringExt.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		E5D44A1E254A988E00718AEC = {
@@ -179,6 +192,7 @@
 		E5D44A2A254A988E00718AEC /* NetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
+				E59975BB254ACAFF004AF0D9 /* Extension */,
 				E59975A3254AC82A004AF0D9 /* Session */,
 				E5997598254AC70E004AF0D9 /* Client */,
 				E599755F254AC245004AF0D9 /* Models */,
@@ -374,6 +388,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5997579254AC3A5004AF0D9 /* OStoryList.swift in Sources */,
+				E59975BD254ACB08004AF0D9 /* StringExt.swift in Sources */,
 				E5997571254AC330004AF0D9 /* OEventList.swift in Sources */,
 				E59975A0254AC7AF004AF0D9 /* BaseApiClient.swift in Sources */,
 				E5997569254AC2AF004AF0D9 /* OEventSummary.swift in Sources */,
@@ -385,6 +400,7 @@
 				E5997595254AC553004AF0D9 /* OCharacterDataWrapper.swift in Sources */,
 				E599756D254AC2DE004AF0D9 /* OSeriesList.swift in Sources */,
 				E599758D254AC4EA004AF0D9 /* OCharacter.swift in Sources */,
+				E59975AF254AC90F004AF0D9 /* ApiClient.swift in Sources */,
 				E599757D254AC42B004AF0D9 /* OComicSummary.swift in Sources */,
 				E5997565254AC27B004AF0D9 /* OSeriesSummary.swift in Sources */,
 				E59975AB254AC845004AF0D9 /* URLSessionImpl.swift in Sources */,
