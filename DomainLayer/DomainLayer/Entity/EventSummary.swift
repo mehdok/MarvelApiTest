@@ -6,7 +6,7 @@
 //
 
 public struct EventSummary: BaseEntity {
-    internal init(resourceURI: String?, name: String?) {
+    public init(resourceURI: String?, name: String?) {
         self.resourceURI = resourceURI
         self.name = name
     }
