@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		947F1372BA067EA85C34E04E /* Pods_DataLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79B462380B5363269F0EECAA /* Pods_DataLayer.framework */; };
 		AFD46CF4F66C4517657A6672 /* Pods_DataLayerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81551FA3A11AD4677D82FFD1 /* Pods_DataLayerTests.framework */; };
+		E59975DF254AEC88004AF0D9 /* DomainLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E59975DD254AEC88004AF0D9 /* DomainLayer.framework */; };
+		E59975E0254AEC88004AF0D9 /* DomainLayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E59975DD254AEC88004AF0D9 /* DomainLayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E59975E1254AEC88004AF0D9 /* NetworkLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E59975DE254AEC88004AF0D9 /* NetworkLayer.framework */; };
+		E59975E2254AEC88004AF0D9 /* NetworkLayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E59975DE254AEC88004AF0D9 /* NetworkLayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E59975E7254AECA7004AF0D9 /* DataModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59975E6254AECA7004AF0D9 /* DataModule.swift */; };
 		E5D44A5D254A98B700718AEC /* DataLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5D44A53254A98B600718AEC /* DataLayer.framework */; };
 		E5D44A62254A98B700718AEC /* DataLayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D44A61254A98B700718AEC /* DataLayerTests.swift */; };
 		E5D44A64254A98B700718AEC /* DataLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = E5D44A56254A98B600718AEC /* DataLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -24,6 +29,21 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		E59975E3254AEC89004AF0D9 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E59975E0254AEC88004AF0D9 /* DomainLayer.framework in Embed Frameworks */,
+				E59975E2254AEC88004AF0D9 /* NetworkLayer.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		3D6381295F5028A8FA245957 /* Pods-DataLayerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DataLayerTests.debug.xcconfig"; path = "Target Support Files/Pods-DataLayerTests/Pods-DataLayerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		79B462380B5363269F0EECAA /* Pods_DataLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DataLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -31,6 +51,9 @@
 		BBFE657F7B4DE9E4680446C4 /* Pods-DataLayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DataLayer.release.xcconfig"; path = "Target Support Files/Pods-DataLayer/Pods-DataLayer.release.xcconfig"; sourceTree = "<group>"; };
 		D862809ACC2533172171CF3C /* Pods-DataLayerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DataLayerTests.release.xcconfig"; path = "Target Support Files/Pods-DataLayerTests/Pods-DataLayerTests.release.xcconfig"; sourceTree = "<group>"; };
 		E206C52DEF86651A8794E16B /* Pods-DataLayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DataLayer.debug.xcconfig"; path = "Target Support Files/Pods-DataLayer/Pods-DataLayer.debug.xcconfig"; sourceTree = "<group>"; };
+		E59975DD254AEC88004AF0D9 /* DomainLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DomainLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E59975DE254AEC88004AF0D9 /* NetworkLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NetworkLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E59975E6254AECA7004AF0D9 /* DataModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModule.swift; sourceTree = "<group>"; };
 		E5D44A53254A98B600718AEC /* DataLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DataLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5D44A56254A98B600718AEC /* DataLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataLayer.h; sourceTree = "<group>"; };
 		E5D44A57254A98B600718AEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -44,6 +67,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E59975E1254AEC88004AF0D9 /* NetworkLayer.framework in Frameworks */,
+				E59975DF254AEC88004AF0D9 /* DomainLayer.framework in Frameworks */,
 				947F1372BA067EA85C34E04E /* Pods_DataLayer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -63,6 +88,8 @@
 		3CCC2DEAD48D766E9D0892F4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E59975DD254AEC88004AF0D9 /* DomainLayer.framework */,
+				E59975DE254AEC88004AF0D9 /* NetworkLayer.framework */,
 				79B462380B5363269F0EECAA /* Pods_DataLayer.framework */,
 				81551FA3A11AD4677D82FFD1 /* Pods_DataLayerTests.framework */,
 			);
@@ -79,6 +106,14 @@
 			);
 			name = Pods;
 			path = ../Pods;
+			sourceTree = "<group>";
+		};
+		E59975E4254AEC93004AF0D9 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				E59975E6254AECA7004AF0D9 /* DataModule.swift */,
+			);
+			path = Module;
 			sourceTree = "<group>";
 		};
 		E5D44A49254A98B600718AEC = {
@@ -104,6 +139,7 @@
 		E5D44A55254A98B600718AEC /* DataLayer */ = {
 			isa = PBXGroup;
 			children = (
+				E59975E4254AEC93004AF0D9 /* Module */,
 				E5D44A56254A98B600718AEC /* DataLayer.h */,
 				E5D44A57254A98B600718AEC /* Info.plist */,
 			);
@@ -142,6 +178,7 @@
 				E5D44A4F254A98B600718AEC /* Sources */,
 				E5D44A50254A98B600718AEC /* Frameworks */,
 				E5D44A51254A98B600718AEC /* Resources */,
+				E59975E3254AEC89004AF0D9 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -182,6 +219,7 @@
 				TargetAttributes = {
 					E5D44A52254A98B600718AEC = {
 						CreatedOnToolsVersion = 12.1;
+						LastSwiftMigration = 1210;
 					};
 					E5D44A5B254A98B700718AEC = {
 						CreatedOnToolsVersion = 12.1;
@@ -276,6 +314,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E59975E7254AECA7004AF0D9 /* DataModule.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,6 +463,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E206C52DEF86651A8794E16B /* Pods-DataLayer.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = Y9CYE9NBLT;
@@ -442,6 +482,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -451,6 +492,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BBFE657F7B4DE9E4680446C4 /* Pods-DataLayer.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = Y9CYE9NBLT;
@@ -478,6 +520,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3D6381295F5028A8FA245957 /* Pods-DataLayerTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y9CYE9NBLT;
 				INFOPLIST_FILE = DataLayerTests/Info.plist;
@@ -497,6 +540,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D862809ACC2533172171CF3C /* Pods-DataLayerTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y9CYE9NBLT;
 				INFOPLIST_FILE = DataLayerTests/Info.plist;
