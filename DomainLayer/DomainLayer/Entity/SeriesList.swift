@@ -6,7 +6,7 @@
 //
 
 public struct SeriesList: BaseEntity {
-    internal init(available: Int?, returned: Int?, collectionURI: String?, items: [SeriesSummary]?) {
+    public init(available: Int?, returned: Int?, collectionURI: String?, items: [SeriesSummary]?) {
         self.available = available
         self.returned = returned
         self.collectionURI = collectionURI
