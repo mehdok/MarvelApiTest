@@ -10,6 +10,13 @@
 		1EB70CC91804033B7AF8B14B /* Pods_MarvelApiTest_MarvelApiTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5A7FD8843F026C2C4DAD0EC /* Pods_MarvelApiTest_MarvelApiTestUITests.framework */; };
 		23120D4E77407D094B8B5AC5 /* Pods_MarvelApiTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47DF00D3CDA596F6E22529E4 /* Pods_MarvelApiTestTests.framework */; };
 		526D2E1965AB207276188AFA /* Pods_MarvelApiTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28470965089DBC4B1D9C01FE /* Pods_MarvelApiTest.framework */; };
+		E599748D254A9D86004AF0D9 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E599748C254A9D86004AF0D9 /* BaseViewModel.swift */; };
+		E5997494254A9DDE004AF0D9 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5997493254A9DDE004AF0D9 /* Log.swift */; };
+		E599749A254A9E19004AF0D9 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5997499254A9E19004AF0D9 /* BaseView.swift */; };
+		E599749E254A9E32004AF0D9 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E599749D254A9E32004AF0D9 /* BaseCoordinator.swift */; };
+		E59974A2254A9E48004AF0D9 /* StoryboardInitializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59974A1254A9E48004AF0D9 /* StoryboardInitializable.swift */; };
+		E59974A6254A9E60004AF0D9 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59974A5254A9E60004AF0D9 /* BaseViewController.swift */; };
+		E59974AA254A9EA1004AF0D9 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59974A9254A9EA1004AF0D9 /* BaseNavigationController.swift */; };
 		E5D449BA254A976B00718AEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D449B9254A976B00718AEC /* AppDelegate.swift */; };
 		E5D449BC254A976B00718AEC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D449BB254A976B00718AEC /* SceneDelegate.swift */; };
 		E5D449BE254A976B00718AEC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D449BD254A976B00718AEC /* ViewController.swift */; };
@@ -69,6 +76,13 @@
 		9C78360176B60EE8B0B43951 /* Pods-MarvelApiTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelApiTestTests.release.xcconfig"; path = "Target Support Files/Pods-MarvelApiTestTests/Pods-MarvelApiTestTests.release.xcconfig"; sourceTree = "<group>"; };
 		C5AEF6F3198C3CD5714F25C9 /* Pods-MarvelApiTest-MarvelApiTestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelApiTest-MarvelApiTestUITests.debug.xcconfig"; path = "Target Support Files/Pods-MarvelApiTest-MarvelApiTestUITests/Pods-MarvelApiTest-MarvelApiTestUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D5A7FD8843F026C2C4DAD0EC /* Pods_MarvelApiTest_MarvelApiTestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MarvelApiTest_MarvelApiTestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E599748C254A9D86004AF0D9 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		E5997493254A9DDE004AF0D9 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		E5997499254A9E19004AF0D9 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		E599749D254A9E32004AF0D9 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		E59974A1254A9E48004AF0D9 /* StoryboardInitializable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInitializable.swift; sourceTree = "<group>"; };
+		E59974A5254A9E60004AF0D9 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		E59974A9254A9EA1004AF0D9 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		E5D449B6254A976B00718AEC /* MarvelApiTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarvelApiTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5D449B9254A976B00718AEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E5D449BB254A976B00718AEC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -145,6 +159,27 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E599748B254A9D55004AF0D9 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				E599748C254A9D86004AF0D9 /* BaseViewModel.swift */,
+				E5997499254A9E19004AF0D9 /* BaseView.swift */,
+				E599749D254A9E32004AF0D9 /* BaseCoordinator.swift */,
+				E59974A1254A9E48004AF0D9 /* StoryboardInitializable.swift */,
+				E59974A5254A9E60004AF0D9 /* BaseViewController.swift */,
+				E59974A9254A9EA1004AF0D9 /* BaseNavigationController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		E5997492254A9DD1004AF0D9 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				E5997493254A9DDE004AF0D9 /* Log.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		E5D449AD254A976B00718AEC = {
 			isa = PBXGroup;
 			children = (
@@ -170,6 +205,8 @@
 		E5D449B8254A976B00718AEC /* MarvelApiTest */ = {
 			isa = PBXGroup;
 			children = (
+				E5997492254A9DD1004AF0D9 /* Utils */,
+				E599748B254A9D55004AF0D9 /* Base */,
 				E5D449B9254A976B00718AEC /* AppDelegate.swift */,
 				E5D449BB254A976B00718AEC /* SceneDelegate.swift */,
 				E5D449BD254A976B00718AEC /* ViewController.swift */,
@@ -439,7 +476,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5D449BE254A976B00718AEC /* ViewController.swift in Sources */,
+				E599748D254A9D86004AF0D9 /* BaseViewModel.swift in Sources */,
+				E59974A2254A9E48004AF0D9 /* StoryboardInitializable.swift in Sources */,
+				E5997494254A9DDE004AF0D9 /* Log.swift in Sources */,
+				E599749A254A9E19004AF0D9 /* BaseView.swift in Sources */,
+				E59974A6254A9E60004AF0D9 /* BaseViewController.swift in Sources */,
+				E599749E254A9E32004AF0D9 /* BaseCoordinator.swift in Sources */,
 				E5D449BA254A976B00718AEC /* AppDelegate.swift in Sources */,
+				E59974AA254A9EA1004AF0D9 /* BaseNavigationController.swift in Sources */,
 				E5D449BC254A976B00718AEC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
