@@ -31,7 +31,6 @@ class CharacterCell: UITableViewCell {
         characterImage.kf.indicatorType = .activity
         if let imagePath = character?.thumbnail?.path, let imageExt = character?.thumbnail?.ext {
             characterImage.kf.setImage(with: URL(string: "\(imagePath).\(imageExt)")!)
-
         }
     }
 }
