@@ -203,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				E59975D4254AEB73004AF0D9 /* Base */,
+				E59975D9254AEBA9004AF0D9 /* MarvelCharactersUsecase.swift */,
 			);
 			path = Interactors;
 			sourceTree = "<group>";
@@ -211,7 +212,6 @@
 			isa = PBXGroup;
 			children = (
 				E59975D5254AEB82004AF0D9 /* ObservableUseCase.swift */,
-				E59975D9254AEBA9004AF0D9 /* MarvelCharactersUsecase.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
