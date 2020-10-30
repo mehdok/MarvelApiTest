@@ -8,6 +8,7 @@
 import UIKit
 import DomainLayer
 import RxSwift
+import Kingfisher
 
 class CharacterCell: UITableViewCell {
     @IBOutlet weak var characterImage: UIImageView!
@@ -21,6 +22,10 @@ class CharacterCell: UITableViewCell {
     
     private func updateCell() {
         characterName.text = character?.name
-        //TODO setImage
+        characterImage.kf.indicatorType = .activity
+        if let imagePath = character?.thumbnail?.path, let imageExt = character?.thumbnail?.ext {
+            characterImage.kf.setImage(with: URL(string: "\(imagePath).\(imageExt)")!)
+
+        }
     }
 }

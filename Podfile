@@ -22,6 +22,11 @@ def rx_gesture
 end
 
 ##
+def king_fisher
+  pod 'Kingfisher', '~> 5.15.7'
+end
+
+##
 def network_pods
   rx_swift
   rx_cocoa
@@ -82,6 +87,7 @@ target 'MarvelApiTest' do
   rx_cocoa
   rx_data_source
   rx_gesture
+  king_fisher
 
   target 'MarvelApiTestTests' do
     inherit! :search_paths
