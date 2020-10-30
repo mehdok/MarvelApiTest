@@ -21,6 +21,7 @@ class MainScreenVM: BaseViewModel {
     private let marvelCharactersUsecase: MarvelCharactersUsecase
 
     var isLoading: Driver<Bool>?
+    var isPartialLoading: Driver<Bool>?
     var hasFailed: Driver<Error?>?
     var hasSucced: Driver<[Character]>?
 
@@ -61,7 +62,18 @@ class MainScreenVM: BaseViewModel {
         isLoading = state
             .map { event in
                 switch event {
-                case .loading: return true
+                // it is first loading only if characters count is zero
+                case .loading: return self.characters.isEmpty
+                default: return false
+                }
+            }
+            .distinctUntilChanged()
+
+        isPartialLoading = state
+            .map { [unowned self] event in
+                switch event {
+                // it is partial loading if it is loading and characters count is more than one
+                case .loading: return !self.characters.isEmpty
                 default: return false
                 }
             }
