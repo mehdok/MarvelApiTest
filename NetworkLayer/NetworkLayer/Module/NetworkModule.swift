@@ -26,8 +26,8 @@ public struct NetworkModule: NetworkModuleType {
 extension NetworkModule {
     fileprivate func component() -> URLSession {
         let configuration = URLSessionConfiguration.default
-        configuration.timeoutIntervalForRequest = 40 // seconds
-        configuration.timeoutIntervalForResource = 40
+        configuration.timeoutIntervalForRequest = 15 // seconds
+        configuration.timeoutIntervalForResource = 15
         return URLSession(configuration: configuration)
     }
     
