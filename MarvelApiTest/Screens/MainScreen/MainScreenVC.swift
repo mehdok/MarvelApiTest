@@ -59,7 +59,7 @@ class MainScreenVC: BaseViewController<MainScreenVM> {
 extension MainScreenVC {
     var rx_showLoading: AnyObserver<Bool> {
         return Binder(self, binding: { [weak self] _, show in
-            show ? self?.loadIndicator.startAnimating() : self?.loadIndicator.stopAnimating()
+            self?.loadIndicator.isHidden = !show
         }).asObserver()
     }
 }

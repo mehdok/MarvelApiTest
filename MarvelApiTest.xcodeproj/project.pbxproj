@@ -14,6 +14,7 @@
 		E5916757254BEB6A0050219F /* CharacterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5916755254BEB6A0050219F /* CharacterCell.swift */; };
 		E5916758254BEB6A0050219F /* CharacterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5916756254BEB6A0050219F /* CharacterCell.xib */; };
 		E591675D254BED8C0050219F /* GradientBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E591675C254BED8C0050219F /* GradientBackgroundView.swift */; };
+		E5916764254BF5510050219F /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5916763254BF5510050219F /* UIViewControllerExt.swift */; };
 		E599748D254A9D86004AF0D9 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E599748C254A9D86004AF0D9 /* BaseViewModel.swift */; };
 		E5997494254A9DDE004AF0D9 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5997493254A9DDE004AF0D9 /* Log.swift */; };
 		E599749A254A9E19004AF0D9 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5997499254A9E19004AF0D9 /* BaseView.swift */; };
@@ -92,6 +93,7 @@
 		E5916755254BEB6A0050219F /* CharacterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCell.swift; sourceTree = "<group>"; };
 		E5916756254BEB6A0050219F /* CharacterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterCell.xib; sourceTree = "<group>"; };
 		E591675C254BED8C0050219F /* GradientBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientBackgroundView.swift; sourceTree = "<group>"; };
+		E5916763254BF5510050219F /* UIViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
 		E599748C254A9D86004AF0D9 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		E5997493254A9DDE004AF0D9 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		E5997499254A9E19004AF0D9 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
@@ -201,6 +203,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		E5916762254BF5410050219F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E5916763254BF5510050219F /* UIViewControllerExt.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		E599748B254A9D55004AF0D9 /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -286,6 +296,7 @@
 		E5D449B8254A976B00718AEC /* MarvelApiTest */ = {
 			isa = PBXGroup;
 			children = (
+				E5916762254BF5410050219F /* Extensions */,
 				E591675B254BED760050219F /* Views */,
 				E59974D2254AA35E004AF0D9 /* Services */,
 				E59974C7254AA2D2004AF0D9 /* Application */,
@@ -566,6 +577,7 @@
 				E599748D254A9D86004AF0D9 /* BaseViewModel.swift in Sources */,
 				E59974A2254A9E48004AF0D9 /* StoryboardInitializable.swift in Sources */,
 				E591675D254BED8C0050219F /* GradientBackgroundView.swift in Sources */,
+				E5916764254BF5510050219F /* UIViewControllerExt.swift in Sources */,
 				E59974B2254A9FD6004AF0D9 /* MainScreenVM.swift in Sources */,
 				E5916752254BEAD20050219F /* CharacterSection.swift in Sources */,
 				E5997494254A9DDE004AF0D9 /* Log.swift in Sources */,

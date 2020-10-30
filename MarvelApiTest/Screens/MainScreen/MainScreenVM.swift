@@ -46,7 +46,7 @@ class MainScreenVM: BaseViewModel {
                         Driver.just(.error(error))
                     }
                     .startWith(.loading)
-            }
+            }.debug()
 
         isLoading = state
             .map { event in

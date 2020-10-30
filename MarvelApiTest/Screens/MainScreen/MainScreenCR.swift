@@ -21,6 +21,7 @@ class MainScreenCR: BaseCoordinator<Void> {
     override func start() -> Observable<Void> {
         let viewController = MainScreenVC.instance()
         let viewModel = MainScreenVM(marvelCharactersUsecase: dataModule.component())
+        viewModel.bindViewDidLoad(viewController.rx.viewDidLoad.asDriver())
         viewController.viewModel = viewModel
 
         navigationController.viewControllers = [viewController]
