@@ -65,7 +65,7 @@ class MainScreenVC: BaseViewController<MainScreenVM> {
                     .when(.recognized)
                     .map{_ in item }
                     .bind(to: viewModel.openDetailScreen)
-                    .disposed(by: bag)
+                    .disposed(by: cell.bag)
 
                 return cell
             }
