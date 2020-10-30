@@ -6,7 +6,7 @@
 //
 
 public struct Character: BaseEntity {
-    public init(id: Int?, name: String?, description: String?, modified: Date?, resourceURI: String, urls: [Url]?, thumbnail: Image?, comics: ComicList?, stories: StoryList?, events: EventList?, series: SeriesList?) {
+    public init(id: Int?, name: String?, description: String?, modified: String?, resourceURI: String, urls: [Url]?, thumbnail: Image?, comics: ComicList?, stories: StoryList?, events: EventList?, series: SeriesList?) {
         self.id = id
         self.name = name
         self.description = description
@@ -27,7 +27,7 @@ public struct Character: BaseEntity {
     /// A short bio or description of the character.
     public let description: String?
     /// The date the resource was most recently modified.
-    public let modified: Date?
+    public let modified: String?
     /// The canonical URL identifier for this resource.
     public let resourceURI: String
     /// A set of public web site URLs for the resource.
