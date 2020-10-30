@@ -38,7 +38,7 @@
                             </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="29O-RS-Mwk"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="29O-RS-Mwk" firstAttribute="trailing" secondItem="fAw-jV-WWo" secondAttribute="trailing" constant="16" id="1ex-ma-XG8"/>
                             <constraint firstItem="NRR-Xp-ucD" firstAttribute="top" secondItem="i9r-vB-TZO" secondAttribute="bottom" constant="16" id="63e-97-cFS"/>

@@ -26,7 +26,7 @@
                             </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="HcN-07-E6f"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="QxW-FX-qSp" firstAttribute="centerX" secondItem="pig-EE-ura" secondAttribute="centerX" id="0fA-3l-b2s"/>
                             <constraint firstItem="HcN-07-E6f" firstAttribute="trailing" secondItem="PiJ-mh-Bpe" secondAttribute="trailing" id="CSc-F3-VGM"/>
