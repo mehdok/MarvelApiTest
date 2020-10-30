@@ -43,6 +43,8 @@ struct ApiClient: BaseApiClient {
                                  headers: headers,
                                  queries: queries,
                                  body: &finalBody)
+        
+        print(request.url)
 
         return Observable.create { subscriber -> Disposable in
             self.session.dataTask(with: request) { data, response, error in

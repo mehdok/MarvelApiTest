@@ -29,7 +29,10 @@ class MainScreenVM: BaseViewModel {
     private let didLoadMore: Driver<Void>
 
     private var characters = [Character]()
-    private let kLimitPerPage = 20
+    private let kLimitPerPage = 20 // < 100
+
+    // This flag indicate weather we are loading more content or not
+    var loading = false
 
     init(marvelCharactersUsecase: MarvelCharactersUsecase) {
         self.marvelCharactersUsecase = marvelCharactersUsecase
@@ -41,11 +44,14 @@ class MainScreenVM: BaseViewModel {
 
     func bindViewDidLoad(_ vdl: Driver<Void>) {
         let state = Driver.merge(vdl, didLoadMore)
-            .flatMap { [unowned self] () -> Driver<MarvelCharacterResult> in
+            .filter { [unowned self] _ in !self.loading }
+            .map {_ in self.loading = true }
+            .flatMap { [unowned self] _ -> Driver<MarvelCharacterResult> in
                 self.marvelCharactersUsecase
                     .execute(CharacterUsecaseParam(kLimitPerPage, characters.count))
                     .observeOn(MainScheduler.instance)
                     .map { (resource: Resource<CharacterDataWrapper>) -> MarvelCharacterResult in
+                        loading = false
                         switch resource.status {
                         case .success:
                             return .success(resource.data?.data?.results)
