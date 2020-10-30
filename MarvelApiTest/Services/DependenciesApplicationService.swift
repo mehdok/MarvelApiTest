@@ -12,7 +12,7 @@ import NetworkLayer
 class DependenciesApplicationService: ApplicationService {
     private let dependencies = Dependencies {
         Module { DomainModule() as DomainModuleType }
-        Module { NetworkModule(keys: KeyUtil.apiKeys) as NetworkModule }
+        Module { NetworkModule(keys: KeyUtil.apiKeys) as NetworkModuleType }
         Module { DataModule() as DataModuleType }
     }
     
