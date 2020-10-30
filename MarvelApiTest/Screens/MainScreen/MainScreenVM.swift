@@ -11,7 +11,7 @@ import RxSwift
 
 enum MarvelCharacterResult {
     case loading
-    // TODO handle partial loading for loading more content into scsreen
+    // TODO: handle partial loading for loading more content into scsreen
 //    case partialLoading
     case success(CharacterDataContainer?)
     case error(Error?)
@@ -24,15 +24,21 @@ class MainScreenVM: BaseViewModel {
     var hasFailed: Driver<Error?>?
     var hasSucced: Driver<CharacterDataContainer>?
 
+    let loadMore: AnyObserver<Void>
+    private let didLoadMore: Driver<Void>
+
     init(marvelCharactersUsecase: MarvelCharactersUsecase) {
         self.marvelCharactersUsecase = marvelCharactersUsecase
+
+        let loadPublisher = PublishSubject<Void>()
+        loadMore = loadPublisher.asObserver()
+        didLoadMore = loadPublisher.asDriver(onErrorJustReturn: ())
     }
 
     func bindViewDidLoad(_ vdl: Driver<Void>) {
-        // TODO create another driver for loading more data
-        let state = vdl
+        let state = Driver.merge(vdl, didLoadMore)
             .flatMap { [unowned self] () -> Driver<MarvelCharacterResult> in
-                self.marvelCharactersUsecase.execute(())
+                self.marvelCharactersUsecase.execute((CharacterUsecaseParam(40, 0)))
                     .observeOn(MainScheduler.instance)
                     .map { (resource: Resource<CharacterDataWrapper>) -> MarvelCharacterResult in
                         switch resource.status {
@@ -46,7 +52,7 @@ class MainScreenVM: BaseViewModel {
                         Driver.just(.error(error))
                     }
                     .startWith(.loading)
-            }//.debug()
+            } // .debug()
 
         isLoading = state
             .map { event in

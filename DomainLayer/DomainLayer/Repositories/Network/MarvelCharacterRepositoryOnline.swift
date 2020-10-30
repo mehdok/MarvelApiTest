@@ -8,5 +8,9 @@
 import RxSwift
 
 public protocol MarvelCharacterRepositoryOnline {
-    func getCharacters() -> Observable<Resource<CharacterDataWrapper>>
+    /// Get list of marvel characters
+    /// - Parameters:
+    ///   - limit: limit the number of characters per page
+    ///   - offset: start offset
+    func getCharacters(limit: Int, offset: Int) -> Observable<Resource<CharacterDataWrapper>>
 }

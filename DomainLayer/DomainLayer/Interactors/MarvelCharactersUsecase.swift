@@ -7,6 +7,8 @@
 
 import RxSwift
 
+public typealias CharacterUsecaseParam = (Int, Int)
+
 public struct MarvelCharactersUsecase: ObservableUseCase {
     let marvelCharacterRepository: MarvelCharacterRepositoryOnline
     let backgroundScheduler: SchedulerType
@@ -23,10 +25,11 @@ public struct MarvelCharactersUsecase: ObservableUseCase {
     
     public typealias Output = Resource<CharacterDataWrapper>
     
-    public typealias Input = Void
+    public typealias Input = CharacterUsecaseParam
     
-    public func execute(_ input: Void) -> Observable<Resource<CharacterDataWrapper>> {
-        return marvelCharacterRepository.getCharacters()
+    public func execute(_ input: CharacterUsecaseParam) -> Observable<Resource<CharacterDataWrapper>> {
+        let (limit, offset) = input
+        return marvelCharacterRepository.getCharacters(limit: limit, offset: offset)
             .subscribeOn(backgroundScheduler)
             .observeOn(mainScheduler)
     }
