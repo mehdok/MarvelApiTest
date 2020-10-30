@@ -23,7 +23,12 @@ class MainScreenVC: BaseViewController<MainScreenVM> {
     override func bindViews() {
         viewModel.isLoading?.drive(rx_showLoading).disposed(by: bag)
         
-        // TODO: bind has failed
+        viewModel.hasFailed?
+            .filter { $0 != nil }
+            .map { $0! }
+            .map { ($0.localizedDescription, MessageType.error) }
+            .drive(rx_showMessage)
+            .disposed(by: bag)
         
         bindDataSource()
     }
