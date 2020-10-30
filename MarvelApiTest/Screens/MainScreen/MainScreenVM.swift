@@ -33,6 +33,7 @@ class MainScreenVM: BaseViewModel {
 
     // This flag indicate weather we are loading more content or not
     var loading = false
+    var endOfCharactersReached = false
 
     init(marvelCharactersUsecase: MarvelCharactersUsecase) {
         self.marvelCharactersUsecase = marvelCharactersUsecase
@@ -44,7 +45,7 @@ class MainScreenVM: BaseViewModel {
 
     func bindViewDidLoad(_ vdl: Driver<Void>) {
         let state = Driver.merge(vdl, didLoadMore)
-            .filter { [unowned self] _ in !self.loading }
+            .filter { [unowned self] _ in !self.loading && !self.endOfCharactersReached }
             .map {_ in self.loading = true }
             .flatMap { [unowned self] _ -> Driver<MarvelCharacterResult> in
                 self.marvelCharactersUsecase
@@ -103,6 +104,7 @@ class MainScreenVM: BaseViewModel {
             }
             .filter { $0 != nil }
             .map { [unowned self] in
+                self.endOfCharactersReached = $0!.isEmpty
                 self.characters.append(contentsOf: $0!)
                 return self.characters
             }

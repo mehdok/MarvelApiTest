@@ -53,7 +53,7 @@ class MainScreenVC: BaseViewController<MainScreenVM> {
         tableView.register(UINib(nibName: kCharacterCellId, bundle: nil),
                            forCellReuseIdentifier: kCharacterCellId)
 
-        tableView.rowHeight = 180
+        tableView.rowHeight = 240
 
         let dataSource = RxTableViewSectionedReloadDataSource<SectionOfCharacter>(
             configureCell: { [unowned self] _, tableView, indexPath, item in
