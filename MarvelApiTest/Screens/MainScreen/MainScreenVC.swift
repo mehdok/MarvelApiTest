@@ -48,8 +48,7 @@ class MainScreenVC: BaseViewController<MainScreenVM> {
     }
 
     func bindDataSource() {
-        // hide separator between empty cells
-        tableView.tableFooterView = UIView()
+        bindLoadingFooter()
 
         tableView.register(UINib(nibName: kCharacterCellId, bundle: nil),
                            forCellReuseIdentifier: kCharacterCellId)
@@ -70,6 +69,16 @@ class MainScreenVC: BaseViewController<MainScreenVM> {
             .map { [SectionOfCharacter(header: "", items: $0)] }
             .drive(tableView.rx.items(dataSource: dataSource))
             .disposed(by: bag)
+    }
+    
+    func bindLoadingFooter() {
+        let footerView = LoadingFooter(frame: CGRect(origin: CGPoint.zero, size: CGSize.zero))
+        footerView.frame.size.height = 100
+        viewModel.isPartialLoading?
+            .map { !$0 }
+            .drive(footerView.loadIndicator.rx.isHidden)
+            .disposed(by: footerView.bag)
+        tableView.tableFooterView = footerView
     }
 }
 

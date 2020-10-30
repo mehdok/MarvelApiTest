@@ -18,6 +18,8 @@
 		E591676C254BF6800050219F /* MessageLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E591676A254BF6800050219F /* MessageLayer.swift */; };
 		E591676D254BF6800050219F /* MessageLayer.xib in Resources */ = {isa = PBXBuildFile; fileRef = E591676B254BF6800050219F /* MessageLayer.xib */; };
 		E5916771254BF6CE0050219F /* UIPanGestureRecognizerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5916770254BF6CE0050219F /* UIPanGestureRecognizerExt.swift */; };
+		E59167FD254C28690050219F /* LoadingFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59167FC254C28690050219F /* LoadingFooter.swift */; };
+		E5916801254C28710050219F /* LoadingFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5916800254C28710050219F /* LoadingFooter.xib */; };
 		E599748D254A9D86004AF0D9 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E599748C254A9D86004AF0D9 /* BaseViewModel.swift */; };
 		E5997494254A9DDE004AF0D9 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5997493254A9DDE004AF0D9 /* Log.swift */; };
 		E599749A254A9E19004AF0D9 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5997499254A9E19004AF0D9 /* BaseView.swift */; };
@@ -100,6 +102,8 @@
 		E591676A254BF6800050219F /* MessageLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageLayer.swift; sourceTree = "<group>"; };
 		E591676B254BF6800050219F /* MessageLayer.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageLayer.xib; sourceTree = "<group>"; };
 		E5916770254BF6CE0050219F /* UIPanGestureRecognizerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPanGestureRecognizerExt.swift; sourceTree = "<group>"; };
+		E59167FC254C28690050219F /* LoadingFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingFooter.swift; sourceTree = "<group>"; };
+		E5916800254C28710050219F /* LoadingFooter.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingFooter.xib; sourceTree = "<group>"; };
 		E599748C254A9D86004AF0D9 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		E5997493254A9DDE004AF0D9 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		E5997499254A9E19004AF0D9 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
@@ -197,6 +201,8 @@
 				E5916751254BEAD20050219F /* CharacterSection.swift */,
 				E5916755254BEB6A0050219F /* CharacterCell.swift */,
 				E5916756254BEB6A0050219F /* CharacterCell.xib */,
+				E59167FC254C28690050219F /* LoadingFooter.swift */,
+				E5916800254C28710050219F /* LoadingFooter.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -461,6 +467,7 @@
 				E5D449C6254A976C00718AEC /* LaunchScreen.storyboard in Resources */,
 				E5916758254BEB6A0050219F /* CharacterCell.xib in Resources */,
 				E5D449C3254A976C00718AEC /* Assets.xcassets in Resources */,
+				E5916801254C28710050219F /* LoadingFooter.xib in Resources */,
 				E59974C0254A9FF3004AF0D9 /* MainScreenSB.storyboard in Resources */,
 				E591676D254BF6800050219F /* MessageLayer.xib in Resources */,
 			);
@@ -609,6 +616,7 @@
 				E59974C9254AA2F4004AF0D9 /* ApplicationService.swift in Sources */,
 				E5D449BA254A976B00718AEC /* AppDelegate.swift in Sources */,
 				E5916757254BEB6A0050219F /* CharacterCell.swift in Sources */,
+				E59167FD254C28690050219F /* LoadingFooter.swift in Sources */,
 				E59974BC254A9FE8004AF0D9 /* MainScreenVC.swift in Sources */,
 				E59974AA254A9EA1004AF0D9 /* BaseNavigationController.swift in Sources */,
 				E59975EF254AFC1A004AF0D9 /* DependenciesApplicationService.swift in Sources */,
