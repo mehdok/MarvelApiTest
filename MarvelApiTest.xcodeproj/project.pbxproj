@@ -10,6 +10,16 @@
 		1EB70CC91804033B7AF8B14B /* Pods_MarvelApiTest_MarvelApiTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5A7FD8843F026C2C4DAD0EC /* Pods_MarvelApiTest_MarvelApiTestUITests.framework */; };
 		23120D4E77407D094B8B5AC5 /* Pods_MarvelApiTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47DF00D3CDA596F6E22529E4 /* Pods_MarvelApiTestTests.framework */; };
 		526D2E1965AB207276188AFA /* Pods_MarvelApiTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28470965089DBC4B1D9C01FE /* Pods_MarvelApiTest.framework */; };
+		E5916752254BEAD20050219F /* CharacterSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5916751254BEAD20050219F /* CharacterSection.swift */; };
+		E5916757254BEB6A0050219F /* CharacterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5916755254BEB6A0050219F /* CharacterCell.swift */; };
+		E5916758254BEB6A0050219F /* CharacterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5916756254BEB6A0050219F /* CharacterCell.xib */; };
+		E591675D254BED8C0050219F /* GradientBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E591675C254BED8C0050219F /* GradientBackgroundView.swift */; };
+		E5916764254BF5510050219F /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5916763254BF5510050219F /* UIViewControllerExt.swift */; };
+		E591676C254BF6800050219F /* MessageLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E591676A254BF6800050219F /* MessageLayer.swift */; };
+		E591676D254BF6800050219F /* MessageLayer.xib in Resources */ = {isa = PBXBuildFile; fileRef = E591676B254BF6800050219F /* MessageLayer.xib */; };
+		E5916771254BF6CE0050219F /* UIPanGestureRecognizerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5916770254BF6CE0050219F /* UIPanGestureRecognizerExt.swift */; };
+		E59167FD254C28690050219F /* LoadingFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59167FC254C28690050219F /* LoadingFooter.swift */; };
+		E5916801254C28710050219F /* LoadingFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5916800254C28710050219F /* LoadingFooter.xib */; };
 		E599748D254A9D86004AF0D9 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E599748C254A9D86004AF0D9 /* BaseViewModel.swift */; };
 		E5997494254A9DDE004AF0D9 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5997493254A9DDE004AF0D9 /* Log.swift */; };
 		E599749A254A9E19004AF0D9 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5997499254A9E19004AF0D9 /* BaseView.swift */; };
@@ -84,6 +94,16 @@
 		9C78360176B60EE8B0B43951 /* Pods-MarvelApiTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelApiTestTests.release.xcconfig"; path = "Target Support Files/Pods-MarvelApiTestTests/Pods-MarvelApiTestTests.release.xcconfig"; sourceTree = "<group>"; };
 		C5AEF6F3198C3CD5714F25C9 /* Pods-MarvelApiTest-MarvelApiTestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelApiTest-MarvelApiTestUITests.debug.xcconfig"; path = "Target Support Files/Pods-MarvelApiTest-MarvelApiTestUITests/Pods-MarvelApiTest-MarvelApiTestUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D5A7FD8843F026C2C4DAD0EC /* Pods_MarvelApiTest_MarvelApiTestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MarvelApiTest_MarvelApiTestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5916751254BEAD20050219F /* CharacterSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterSection.swift; sourceTree = "<group>"; };
+		E5916755254BEB6A0050219F /* CharacterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCell.swift; sourceTree = "<group>"; };
+		E5916756254BEB6A0050219F /* CharacterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterCell.xib; sourceTree = "<group>"; };
+		E591675C254BED8C0050219F /* GradientBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientBackgroundView.swift; sourceTree = "<group>"; };
+		E5916763254BF5510050219F /* UIViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
+		E591676A254BF6800050219F /* MessageLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageLayer.swift; sourceTree = "<group>"; };
+		E591676B254BF6800050219F /* MessageLayer.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageLayer.xib; sourceTree = "<group>"; };
+		E5916770254BF6CE0050219F /* UIPanGestureRecognizerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPanGestureRecognizerExt.swift; sourceTree = "<group>"; };
+		E59167FC254C28690050219F /* LoadingFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingFooter.swift; sourceTree = "<group>"; };
+		E5916800254C28710050219F /* LoadingFooter.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingFooter.xib; sourceTree = "<group>"; };
 		E599748C254A9D86004AF0D9 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		E5997493254A9DDE004AF0D9 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		E5997499254A9E19004AF0D9 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
@@ -175,6 +195,45 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E5916750254BEA590050219F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				E5916751254BEAD20050219F /* CharacterSection.swift */,
+				E5916755254BEB6A0050219F /* CharacterCell.swift */,
+				E5916756254BEB6A0050219F /* CharacterCell.xib */,
+				E59167FC254C28690050219F /* LoadingFooter.swift */,
+				E5916800254C28710050219F /* LoadingFooter.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		E591675B254BED760050219F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E5916769254BF6520050219F /* MessageLayer */,
+				E591675C254BED8C0050219F /* GradientBackgroundView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E5916762254BF5410050219F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E5916763254BF5510050219F /* UIViewControllerExt.swift */,
+				E5916770254BF6CE0050219F /* UIPanGestureRecognizerExt.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E5916769254BF6520050219F /* MessageLayer */ = {
+			isa = PBXGroup;
+			children = (
+				E591676A254BF6800050219F /* MessageLayer.swift */,
+				E591676B254BF6800050219F /* MessageLayer.xib */,
+			);
+			path = MessageLayer;
+			sourceTree = "<group>";
+		};
 		E599748B254A9D55004AF0D9 /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -208,6 +267,7 @@
 		E59974B0254A9FB3004AF0D9 /* MainScreen */ = {
 			isa = PBXGroup;
 			children = (
+				E5916750254BEA590050219F /* Cell */,
 				E59974B1254A9FD6004AF0D9 /* MainScreenVM.swift */,
 				E59974B7254A9FDF004AF0D9 /* MainScreenCR.swift */,
 				E59974BB254A9FE8004AF0D9 /* MainScreenVC.swift */,
@@ -259,6 +319,8 @@
 		E5D449B8254A976B00718AEC /* MarvelApiTest */ = {
 			isa = PBXGroup;
 			children = (
+				E5916762254BF5410050219F /* Extensions */,
+				E591675B254BED760050219F /* Views */,
 				E59974D2254AA35E004AF0D9 /* Services */,
 				E59974C7254AA2D2004AF0D9 /* Application */,
 				E59974AF254A9F97004AF0D9 /* Screens */,
@@ -403,8 +465,11 @@
 			files = (
 				E5997554254ABE9A004AF0D9 /* Keys.plist in Resources */,
 				E5D449C6254A976C00718AEC /* LaunchScreen.storyboard in Resources */,
+				E5916758254BEB6A0050219F /* CharacterCell.xib in Resources */,
 				E5D449C3254A976C00718AEC /* Assets.xcassets in Resources */,
+				E5916801254C28710050219F /* LoadingFooter.xib in Resources */,
 				E59974C0254A9FF3004AF0D9 /* MainScreenSB.storyboard in Resources */,
+				E591676D254BF6800050219F /* MessageLayer.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -536,15 +601,22 @@
 				E59974C4254AA100004AF0D9 /* AppCoordinator.swift in Sources */,
 				E599748D254A9D86004AF0D9 /* BaseViewModel.swift in Sources */,
 				E59974A2254A9E48004AF0D9 /* StoryboardInitializable.swift in Sources */,
+				E591675D254BED8C0050219F /* GradientBackgroundView.swift in Sources */,
+				E5916764254BF5510050219F /* UIViewControllerExt.swift in Sources */,
+				E5916771254BF6CE0050219F /* UIPanGestureRecognizerExt.swift in Sources */,
 				E59974B2254A9FD6004AF0D9 /* MainScreenVM.swift in Sources */,
+				E5916752254BEAD20050219F /* CharacterSection.swift in Sources */,
 				E5997494254A9DDE004AF0D9 /* Log.swift in Sources */,
 				E599749A254A9E19004AF0D9 /* BaseView.swift in Sources */,
 				E59974B8254A9FDF004AF0D9 /* MainScreenCR.swift in Sources */,
+				E591676C254BF6800050219F /* MessageLayer.swift in Sources */,
 				E59974CF254AA30C004AF0D9 /* PluggableApplicationDelegate.swift in Sources */,
 				E59974A6254A9E60004AF0D9 /* BaseViewController.swift in Sources */,
 				E599749E254A9E32004AF0D9 /* BaseCoordinator.swift in Sources */,
 				E59974C9254AA2F4004AF0D9 /* ApplicationService.swift in Sources */,
 				E5D449BA254A976B00718AEC /* AppDelegate.swift in Sources */,
+				E5916757254BEB6A0050219F /* CharacterCell.swift in Sources */,
+				E59167FD254C28690050219F /* LoadingFooter.swift in Sources */,
 				E59974BC254A9FE8004AF0D9 /* MainScreenVC.swift in Sources */,
 				E59974AA254A9EA1004AF0D9 /* BaseNavigationController.swift in Sources */,
 				E59975EF254AFC1A004AF0D9 /* DependenciesApplicationService.swift in Sources */,
