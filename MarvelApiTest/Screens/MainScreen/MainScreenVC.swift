@@ -20,6 +20,13 @@ class MainScreenVC: BaseViewController<MainScreenVM> {
         MainScreenVC.initFromStoryboard(name: "MainScreenSB")
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        navigationItem.title = "Marvel characters"
+    }
+
+    
     override func bindViews() {
         viewModel.isLoading?.drive(rx_showLoading).disposed(by: bag)
         
