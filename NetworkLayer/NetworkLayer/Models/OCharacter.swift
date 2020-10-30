@@ -11,7 +11,7 @@ struct OCharacter: BaseModel {
     let id: Int?
     let name: String?
     let description: String?
-    let modified: Date?
+    let modified: String?
     let resourceURI: String
     let urls: [OUrl]?
     let thumbnail: OImage?

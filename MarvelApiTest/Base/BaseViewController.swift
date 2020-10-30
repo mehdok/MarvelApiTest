@@ -14,6 +14,8 @@ open class BaseViewController<VM: BaseViewModel>: UIViewController,
 {
     public var viewModel: VM!
     public var bag = DisposeBag()
+    
+    fileprivate var messageView: MessageLayer?
 
     public var moveViewAlongKeyboard = false
     private var kbHeight: CGFloat!
@@ -86,11 +88,35 @@ open class BaseViewController<VM: BaseViewModel>: UIViewController,
 }
 
 extension BaseViewController {
+    public func showMessage(msg: String,
+                            messageType: MessageType) {
+        let height = statusBarHeight() + MessageLayer.messageHeight
+        messageView = MessageLayer(frame: CGRect(x: 0,
+                                                 y: 0,
+                                                 width: view.frame.width,
+                                                 height: height))
+        if let nav = navigationController {
+            nav.view.addSubview(messageView!)
+        } else {
+            view.addSubview(messageView!)
+        }
+        messageView?.showMessage(msg, type: messageType, autoHide: true)
+    }
+    
     func statusBarHeight() -> CGFloat {
         if #available(iOS 13.0, *) {
             return view.window?.windowScene?.statusBarManager?.statusBarFrame.height ?? 0
         } else {
             return UIApplication.shared.statusBarFrame.height
         }
+    }
+}
+
+extension BaseViewController {
+    public var rx_showMessage: AnyObserver<(String, MessageType)> {
+        return Binder(self, binding: { [weak self] _, data in
+            let (msg, type) = data
+            self?.showMessage(msg: msg, messageType: type)
+        }).asObserver()
     }
 }

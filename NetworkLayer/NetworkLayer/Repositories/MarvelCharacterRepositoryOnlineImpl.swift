@@ -11,9 +11,13 @@ import RxSwift
 struct MarvelCharacterRepositoryOnlineImpl: MarvelCharacterRepositoryOnline {
     let client: BaseApiClient
 
-    func getCharacters() -> Observable<Resource<CharacterDataWrapper>> {
+    func getCharacters(limit: Int, offset: Int) -> Observable<Resource<CharacterDataWrapper>> {
         let characters: Observable<Resource<OCharacterDataWrapper>> =
-            client.call(.characters, headers: nil, queries: nil, body: nil)
+            client.call(.characters,
+                        headers: nil,
+                        queries: [URLQueryItem(name: "limit", value: "\(limit)"),
+                                  URLQueryItem(name: "offset", value: "\(offset)")],
+                        body: nil)
 
         return characters
             .flatMap { resource -> Observable<Resource<CharacterDataWrapper>> in

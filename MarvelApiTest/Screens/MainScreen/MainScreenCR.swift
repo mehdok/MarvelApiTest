@@ -6,8 +6,12 @@
 //
 
 import RxSwift
+import DataLayer
+import DomainLayer
 
 class MainScreenCR: BaseCoordinator<Void> {
+    @Inject private var dataModule: DataModuleType
+
     let navigationController: UINavigationController
 
     public init(navigationController: UINavigationController) {
@@ -16,7 +20,8 @@ class MainScreenCR: BaseCoordinator<Void> {
     
     override func start() -> Observable<Void> {
         let viewController = MainScreenVC.instance()
-        let viewModel = MainScreenVM()
+        let viewModel = MainScreenVM(marvelCharactersUsecase: dataModule.component())
+        viewModel.bindViewDidLoad(viewController.rx.viewDidLoad.asDriver())
         viewController.viewModel = viewModel
 
         navigationController.viewControllers = [viewController]

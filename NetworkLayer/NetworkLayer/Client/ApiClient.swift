@@ -43,7 +43,7 @@ struct ApiClient: BaseApiClient {
                                  headers: headers,
                                  queries: queries,
                                  body: &finalBody)
-
+        
         return Observable.create { subscriber -> Disposable in
             self.session.dataTask(with: request) { data, response, error in
                 if let error = error {
