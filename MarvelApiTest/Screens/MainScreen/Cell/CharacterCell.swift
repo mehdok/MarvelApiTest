@@ -14,6 +14,12 @@ class CharacterCell: UITableViewCell {
     @IBOutlet weak var characterImage: UIImageView!
     @IBOutlet weak var characterName: UILabel!
         
+    var bag = DisposeBag()
+    
+    override func prepareForReuse() {
+        bag = DisposeBag()
+    }
+
     var character: Character? {
         didSet {
             updateCell()
@@ -25,7 +31,6 @@ class CharacterCell: UITableViewCell {
         characterImage.kf.indicatorType = .activity
         if let imagePath = character?.thumbnail?.path, let imageExt = character?.thumbnail?.ext {
             characterImage.kf.setImage(with: URL(string: "\(imagePath).\(imageExt)")!)
-
         }
     }
 }

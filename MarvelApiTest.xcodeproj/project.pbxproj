@@ -20,6 +20,10 @@
 		E5916771254BF6CE0050219F /* UIPanGestureRecognizerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5916770254BF6CE0050219F /* UIPanGestureRecognizerExt.swift */; };
 		E59167FD254C28690050219F /* LoadingFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59167FC254C28690050219F /* LoadingFooter.swift */; };
 		E5916801254C28710050219F /* LoadingFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5916800254C28710050219F /* LoadingFooter.xib */; };
+		E5916820254C35F70050219F /* DetailScreenVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E591681F254C35F70050219F /* DetailScreenVM.swift */; };
+		E5916826254C36020050219F /* DetailScreenCR.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5916825254C36020050219F /* DetailScreenCR.swift */; };
+		E591682A254C360A0050219F /* DetailScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5916829254C360A0050219F /* DetailScreenVC.swift */; };
+		E591682E254C36120050219F /* DetailScreenSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E591682D254C36120050219F /* DetailScreenSB.storyboard */; };
 		E599748D254A9D86004AF0D9 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E599748C254A9D86004AF0D9 /* BaseViewModel.swift */; };
 		E5997494254A9DDE004AF0D9 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5997493254A9DDE004AF0D9 /* Log.swift */; };
 		E599749A254A9E19004AF0D9 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5997499254A9E19004AF0D9 /* BaseView.swift */; };
@@ -104,6 +108,10 @@
 		E5916770254BF6CE0050219F /* UIPanGestureRecognizerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPanGestureRecognizerExt.swift; sourceTree = "<group>"; };
 		E59167FC254C28690050219F /* LoadingFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingFooter.swift; sourceTree = "<group>"; };
 		E5916800254C28710050219F /* LoadingFooter.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingFooter.xib; sourceTree = "<group>"; };
+		E591681F254C35F70050219F /* DetailScreenVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScreenVM.swift; sourceTree = "<group>"; };
+		E5916825254C36020050219F /* DetailScreenCR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScreenCR.swift; sourceTree = "<group>"; };
+		E5916829254C360A0050219F /* DetailScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScreenVC.swift; sourceTree = "<group>"; };
+		E591682D254C36120050219F /* DetailScreenSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailScreenSB.storyboard; sourceTree = "<group>"; };
 		E599748C254A9D86004AF0D9 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		E5997493254A9DDE004AF0D9 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		E5997499254A9E19004AF0D9 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
@@ -234,6 +242,17 @@
 			path = MessageLayer;
 			sourceTree = "<group>";
 		};
+		E591681E254C35E30050219F /* DetailScreen */ = {
+			isa = PBXGroup;
+			children = (
+				E591681F254C35F70050219F /* DetailScreenVM.swift */,
+				E5916825254C36020050219F /* DetailScreenCR.swift */,
+				E5916829254C360A0050219F /* DetailScreenVC.swift */,
+				E591682D254C36120050219F /* DetailScreenSB.storyboard */,
+			);
+			path = DetailScreen;
+			sourceTree = "<group>";
+		};
 		E599748B254A9D55004AF0D9 /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -259,6 +278,7 @@
 		E59974AF254A9F97004AF0D9 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				E591681E254C35E30050219F /* DetailScreen */,
 				E59974B0254A9FB3004AF0D9 /* MainScreen */,
 			);
 			path = Screens;
@@ -463,6 +483,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E591682E254C36120050219F /* DetailScreenSB.storyboard in Resources */,
 				E5997554254ABE9A004AF0D9 /* Keys.plist in Resources */,
 				E5D449C6254A976C00718AEC /* LaunchScreen.storyboard in Resources */,
 				E5916758254BEB6A0050219F /* CharacterCell.xib in Resources */,
@@ -599,6 +620,7 @@
 			files = (
 				E59974D4254AA36B004AF0D9 /* UIApplicationService.swift in Sources */,
 				E59974C4254AA100004AF0D9 /* AppCoordinator.swift in Sources */,
+				E591682A254C360A0050219F /* DetailScreenVC.swift in Sources */,
 				E599748D254A9D86004AF0D9 /* BaseViewModel.swift in Sources */,
 				E59974A2254A9E48004AF0D9 /* StoryboardInitializable.swift in Sources */,
 				E591675D254BED8C0050219F /* GradientBackgroundView.swift in Sources */,
@@ -606,9 +628,11 @@
 				E5916771254BF6CE0050219F /* UIPanGestureRecognizerExt.swift in Sources */,
 				E59974B2254A9FD6004AF0D9 /* MainScreenVM.swift in Sources */,
 				E5916752254BEAD20050219F /* CharacterSection.swift in Sources */,
+				E5916820254C35F70050219F /* DetailScreenVM.swift in Sources */,
 				E5997494254A9DDE004AF0D9 /* Log.swift in Sources */,
 				E599749A254A9E19004AF0D9 /* BaseView.swift in Sources */,
 				E59974B8254A9FDF004AF0D9 /* MainScreenCR.swift in Sources */,
+				E5916826254C36020050219F /* DetailScreenCR.swift in Sources */,
 				E591676C254BF6800050219F /* MessageLayer.swift in Sources */,
 				E59974CF254AA30C004AF0D9 /* PluggableApplicationDelegate.swift in Sources */,
 				E59974A6254A9E60004AF0D9 /* BaseViewController.swift in Sources */,

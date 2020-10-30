@@ -9,6 +9,7 @@ import RxCocoa
 import RxDataSources
 import RxSwift
 import UIKit
+import RxGesture
 
 class MainScreenVC: BaseViewController<MainScreenVM> {
     @IBOutlet var tableView: UITableView!
@@ -59,6 +60,12 @@ class MainScreenVC: BaseViewController<MainScreenVM> {
             configureCell: { [unowned self] _, tableView, indexPath, item in
                 let cell = tableView.dequeueReusableCell(withIdentifier: self.kCharacterCellId, for: indexPath) as! CharacterCell
                 cell.character = item
+                
+                cell.rx.tapGesture()
+                    .when(.recognized)
+                    .map{_ in item }
+                    .bind(to: viewModel.openDetailScreen)
+                    .disposed(by: cell.bag)
 
                 return cell
             }

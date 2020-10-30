@@ -11,8 +11,6 @@ import RxSwift
 
 enum MarvelCharacterResult {
     case loading
-    // TODO: handle partial loading for loading more content into scsreen
-//    case partialLoading
     case success([Character]?)
     case error(Error?)
 }
@@ -24,7 +22,10 @@ class MainScreenVM: BaseViewModel {
     var isPartialLoading: Driver<Bool>?
     var hasFailed: Driver<Error?>?
     var hasSucced: Driver<[Character]>?
-
+    
+    let openDetailScreen: AnyObserver<Character>
+    let didOpenDetailScreen: Observable<Character>
+    
     let loadMore: AnyObserver<Void>
     private let didLoadMore: Driver<Void>
 
@@ -41,6 +42,10 @@ class MainScreenVM: BaseViewModel {
         let loadPublisher = PublishSubject<Void>()
         loadMore = loadPublisher.asObserver()
         didLoadMore = loadPublisher.asDriver(onErrorJustReturn: ())
+        
+        let detailPublisher = PublishSubject<Character>()
+        openDetailScreen = detailPublisher.asObserver()
+        didOpenDetailScreen = detailPublisher.asObservable()
     }
 
     func bindViewDidLoad(_ vdl: Driver<Void>) {
