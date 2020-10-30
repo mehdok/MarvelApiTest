@@ -13,7 +13,7 @@ enum MarvelCharacterResult {
     case loading
     // TODO: handle partial loading for loading more content into scsreen
 //    case partialLoading
-    case success(CharacterDataContainer?)
+    case success([Character]?)
     case error(Error?)
 }
 
@@ -22,10 +22,13 @@ class MainScreenVM: BaseViewModel {
 
     var isLoading: Driver<Bool>?
     var hasFailed: Driver<Error?>?
-    var hasSucced: Driver<CharacterDataContainer>?
+    var hasSucced: Driver<[Character]>?
 
     let loadMore: AnyObserver<Void>
     private let didLoadMore: Driver<Void>
+
+    private var characters = [Character]()
+    private let kLimitPerPage = 20
 
     init(marvelCharactersUsecase: MarvelCharactersUsecase) {
         self.marvelCharactersUsecase = marvelCharactersUsecase
@@ -38,12 +41,13 @@ class MainScreenVM: BaseViewModel {
     func bindViewDidLoad(_ vdl: Driver<Void>) {
         let state = Driver.merge(vdl, didLoadMore)
             .flatMap { [unowned self] () -> Driver<MarvelCharacterResult> in
-                self.marvelCharactersUsecase.execute((CharacterUsecaseParam(40, 0)))
+                self.marvelCharactersUsecase
+                    .execute(CharacterUsecaseParam(kLimitPerPage, characters.count))
                     .observeOn(MainScheduler.instance)
                     .map { (resource: Resource<CharacterDataWrapper>) -> MarvelCharacterResult in
                         switch resource.status {
                         case .success:
-                            return .success(resource.data?.data)
+                            return .success(resource.data?.data?.results)
                         case .failure:
                             return .error(resource.error?.error)
                         }
@@ -73,13 +77,16 @@ class MainScreenVM: BaseViewModel {
             .filter { $0 != nil }
 
         hasSucced = state
-            .map { event -> CharacterDataContainer? in
+            .map { event -> [Character]? in
                 switch event {
                 case let .success(characters): return characters
                 default: return nil
                 }
             }
             .filter { $0 != nil }
-            .map { $0! }
+            .map { [unowned self] in
+                self.characters.append(contentsOf: $0!)
+                return self.characters
+            }
     }
 }

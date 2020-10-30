@@ -26,7 +26,6 @@ class MainScreenVC: BaseViewController<MainScreenVM> {
         navigationItem.title = "Marvel characters"
     }
 
-    
     override func bindViews() {
         viewModel.isLoading?.drive(rx_showLoading).disposed(by: bag)
         
@@ -60,8 +59,6 @@ class MainScreenVC: BaseViewController<MainScreenVM> {
         
         viewModel
             .hasSucced?
-            .filter { $0.results != nil }
-            .map { $0.results! }
             .map { [SectionOfCharacter(header: "", items: $0)] }
             .drive(tableView.rx.items(dataSource: dataSource))
             .disposed(by: bag)
