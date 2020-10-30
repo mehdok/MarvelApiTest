@@ -14,6 +14,12 @@ class CharacterCell: UITableViewCell {
     @IBOutlet weak var characterImage: UIImageView!
     @IBOutlet weak var characterName: UILabel!
         
+    var bag = DisposeBag()
+    
+    override func prepareForReuse() {
+        bag = DisposeBag()
+    }
+
     var character: Character? {
         didSet {
             updateCell()
