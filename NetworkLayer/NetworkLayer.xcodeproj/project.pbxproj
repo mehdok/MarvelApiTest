@@ -33,6 +33,10 @@
 		E59975C6254ACF31004AF0D9 /* DomainLayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E59975C4254ACF31004AF0D9 /* DomainLayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E59975CB254AE802004AF0D9 /* MarvelCharacterRepositoryOnlineImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59975CA254AE802004AF0D9 /* MarvelCharacterRepositoryOnlineImpl.swift */; };
 		E59975EB254AED1B004AF0D9 /* NetworkModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59975EA254AED1B004AF0D9 /* NetworkModule.swift */; };
+		E5B9F26A254D48CA0050D14B /* CharactersData.json in Resources */ = {isa = PBXBuildFile; fileRef = E5B9F269254D48CA0050D14B /* CharactersData.json */; };
+		E5B9F26F254D491C0050D14B /* EndPointExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B9F26E254D491C0050D14B /* EndPointExt.swift */; };
+		E5B9F277254D49AD0050D14B /* ApiClientMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B9F276254D49AD0050D14B /* ApiClientMock.swift */; };
+		E5B9F27C254D4BF50050D14B /* MarvelCharacterRepositoryOnlineTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B9F27B254D4BF50050D14B /* MarvelCharacterRepositoryOnlineTest.swift */; };
 		E5D44A32254A988E00718AEC /* NetworkLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5D44A28254A988E00718AEC /* NetworkLayer.framework */; };
 		E5D44A37254A988E00718AEC /* NetworkLayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D44A36254A988E00718AEC /* NetworkLayerTests.swift */; };
 		E5D44A39254A988E00718AEC /* NetworkLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = E5D44A2B254A988E00718AEC /* NetworkLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -90,6 +94,10 @@
 		E59975C4254ACF31004AF0D9 /* DomainLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DomainLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E59975CA254AE802004AF0D9 /* MarvelCharacterRepositoryOnlineImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelCharacterRepositoryOnlineImpl.swift; sourceTree = "<group>"; };
 		E59975EA254AED1B004AF0D9 /* NetworkModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkModule.swift; sourceTree = "<group>"; };
+		E5B9F269254D48CA0050D14B /* CharactersData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CharactersData.json; sourceTree = "<group>"; };
+		E5B9F26E254D491C0050D14B /* EndPointExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointExt.swift; sourceTree = "<group>"; };
+		E5B9F276254D49AD0050D14B /* ApiClientMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClientMock.swift; sourceTree = "<group>"; };
+		E5B9F27B254D4BF50050D14B /* MarvelCharacterRepositoryOnlineTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelCharacterRepositoryOnlineTest.swift; sourceTree = "<group>"; };
 		E5D44A28254A988E00718AEC /* NetworkLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5D44A2B254A988E00718AEC /* NetworkLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkLayer.h; sourceTree = "<group>"; };
 		E5D44A2C254A988E00718AEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -208,6 +216,23 @@
 			path = Module;
 			sourceTree = "<group>";
 		};
+		E5B9F268254D48730050D14B /* MockJson */ = {
+			isa = PBXGroup;
+			children = (
+				E5B9F269254D48CA0050D14B /* CharactersData.json */,
+			);
+			path = MockJson;
+			sourceTree = "<group>";
+		};
+		E5B9F26D254D49040050D14B /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				E5B9F26E254D491C0050D14B /* EndPointExt.swift */,
+				E5B9F276254D49AD0050D14B /* ApiClientMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		E5D44A1E254A988E00718AEC = {
 			isa = PBXGroup;
 			children = (
@@ -246,8 +271,11 @@
 		E5D44A35254A988E00718AEC /* NetworkLayerTests */ = {
 			isa = PBXGroup;
 			children = (
+				E5B9F26D254D49040050D14B /* Mocks */,
+				E5B9F268254D48730050D14B /* MockJson */,
 				E5D44A36254A988E00718AEC /* NetworkLayerTests.swift */,
 				E5D44A38254A988E00718AEC /* Info.plist */,
+				E5B9F27B254D4BF50050D14B /* MarvelCharacterRepositoryOnlineTest.swift */,
 			);
 			path = NetworkLayerTests;
 			sourceTree = "<group>";
@@ -355,6 +383,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5B9F26A254D48CA0050D14B /* CharactersData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,6 +487,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5B9F277254D49AD0050D14B /* ApiClientMock.swift in Sources */,
+				E5B9F27C254D4BF50050D14B /* MarvelCharacterRepositoryOnlineTest.swift in Sources */,
+				E5B9F26F254D491C0050D14B /* EndPointExt.swift in Sources */,
 				E5D44A37254A988E00718AEC /* NetworkLayerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
