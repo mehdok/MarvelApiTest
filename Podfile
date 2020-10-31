@@ -27,9 +27,20 @@ def king_fisher
 end
 
 ##
+def rx_blocking
+  pod 'RxBlocking', '~> 5.1.1'
+end
+
+##
+def rx_test
+  pod 'RxTest', '~> 5.1.1'
+end
+
+##
 def network_pods
   rx_swift
   rx_cocoa
+  rx_blocking
 end
 
 ####
@@ -88,10 +99,13 @@ target 'MarvelApiTest' do
   rx_data_source
   rx_gesture
   king_fisher
+  rx_blocking
 
   target 'MarvelApiTestTests' do
     inherit! :search_paths
     # Pods for testing
+    rx_blocking
+    rx_test
   end
 
   target 'MarvelApiTestUITests' do
