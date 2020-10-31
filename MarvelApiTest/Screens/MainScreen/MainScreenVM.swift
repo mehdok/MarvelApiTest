@@ -69,7 +69,7 @@ class MainScreenVM: BaseViewModel {
                         Driver.just(.error(error))
                     }
                     .startWith(.loading)
-            }//.debug()
+            }//.debug("load_state: \(characters.count)", trimOutput: true)
 
         isLoading = state
             .map { event in

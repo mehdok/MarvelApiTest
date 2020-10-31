@@ -22,7 +22,7 @@ class MainScreenVMTests: XCTestCase {
 
     @Inject private var domainModule: DomainModuleType
     @Inject private var networkModule: NetworkModuleType
-    
+
     var characterUsecase: MarvelCharactersUsecase!
     var viewModel: MainScreenVM!
     var bag: DisposeBag!
@@ -30,7 +30,7 @@ class MainScreenVMTests: XCTestCase {
     // fake view did load observer and driver to simulate viewDidLoad func
     var vld: AnyObserver<Void>!
     var viewDidLoadDriver: Driver<Void>!
-    
+
     override func setUp() {
         super.setUp()
         dependencies.build()
@@ -40,19 +40,19 @@ class MainScreenVMTests: XCTestCase {
         vld = vldPublisher.asObserver()
         viewDidLoadDriver = vldPublisher.asDriver(onErrorJustReturn: ())
     }
-    
+
     func testLoading() throws {
         bag = DisposeBag()
-        
+
         let scheduler = TestScheduler(initialClock: 0)
         viewModel = getViewModel(scheduler: scheduler)
-        
+
         let trigger = scheduler.createHotObservable([.next(0, ())])
         let isLoadingResult = scheduler.createObserver(Bool.self)
-        
+
         // operation starts with loading true then false
         let expected: [Recorded<Event<Bool>>] = [.next(0, true), .next(2, false)]
-        
+
         trigger.bind(to: vld).disposed(by: bag)
         viewModel.isLoading?.drive(isLoadingResult).disposed(by: bag)
 
@@ -63,23 +63,23 @@ class MainScreenVMTests: XCTestCase {
 
     func testData() throws {
         bag = DisposeBag()
-        
+
         let jsonData = self.jsonData(name: "CharactersData")
         let objs = try JSONDecoder().decode(CharacterDataWrapper.self, from: jsonData!)
         let characters = (objs.data!.results)!
-        
+
         let scheduler = TestScheduler(initialClock: 0)
         viewModel = getViewModel(scheduler: scheduler)
-        
+
         let trigger = scheduler.createHotObservable([.next(0, ())])
         let result = scheduler.createObserver([Character].self)
-        
+
         let expected: [Recorded<Event<[Character]>>] = [.next(3, characters)]
-        
+
         trigger.bind(to: vld).disposed(by: bag)
         viewModel.bindViewDidLoad(viewDidLoadDriver)
         viewModel.hasSucced?.drive(result).disposed(by: bag)
-        
+
         scheduler.start()
 
         XCTAssertNotNil(result.events.first)
@@ -93,13 +93,36 @@ class MainScreenVMTests: XCTestCase {
                        expected.first?.value.element?.first?.name)
         XCTAssertEqual(result.events.first?.value, expected.first?.value)
     }
+
+    func testLoadMore() throws {
+        bag = DisposeBag()
+
+        let scheduler = TestScheduler(initialClock: 0)
+        viewModel = getViewModel(scheduler: scheduler)
+
+        let trigger = scheduler.createColdObservable([.next(10, ()), .next(20, ())])
+        let partialLoadingResult = scheduler.createObserver(Bool.self)
+        let successResult = scheduler.createObserver([Character].self)
+
+        // At first we are loading first bunch of data so partialLoading is `false`
+        // on second call we loading more data so partialLoading is `true`
+        // and after receiving data is complete the partialLoading is false again
+        let expected: [Recorded<Event<Bool>>] = [.next(10, false), .next(20, true), .next(22, false)]
+
+        trigger.bind(to: viewModel.loadMore).disposed(by: bag)
+        viewModel.isPartialLoading?.drive(partialLoadingResult).disposed(by: bag)
+        viewModel.hasSucced?.drive(successResult).disposed(by: bag)
+        scheduler.start()
+
+        XCTAssertEqual(partialLoadingResult.events, expected)
+    }
 }
 
 extension MainScreenVMTests {
     func getViewModel(scheduler: TestScheduler) -> MainScreenVM {
         characterUsecase = MarvelCharactersUsecase(marvelCharacterRepository: networkModule.component(),
-                                                  backgroundScheduler: scheduler,
-                                                  mainScheduler: scheduler)
+                                                   backgroundScheduler: scheduler,
+                                                   mainScheduler: scheduler)
 
         viewModel = MainScreenVM(marvelCharactersUsecase: characterUsecase)
         viewModel.bindViewDidLoad(viewDidLoadDriver)
@@ -111,7 +134,8 @@ extension MainScreenVMTests {
 extension MainScreenVMTests {
     func jsonData(name: String) -> Data? {
         guard let filepath = Bundle(for: MainScreenVMTests.self)
-            .url(forResource: name, withExtension: "json") else {
+            .url(forResource: name, withExtension: "json")
+        else {
             return nil
         }
 
