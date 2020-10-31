@@ -42,6 +42,8 @@
 		E5997554254ABE9A004AF0D9 /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = E5997553254ABE9A004AF0D9 /* Keys.plist */; };
 		E5997558254ABEC1004AF0D9 /* KeyUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5997557254ABEC1004AF0D9 /* KeyUtil.swift */; };
 		E59975EF254AFC1A004AF0D9 /* DependenciesApplicationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59975EE254AFC1A004AF0D9 /* DependenciesApplicationService.swift */; };
+		E5B9F280254D530A0050D14B /* CharactersData.json in Resources */ = {isa = PBXBuildFile; fileRef = E5B9F27F254D530A0050D14B /* CharactersData.json */; };
+		E5B9F286254D53560050D14B /* MarvelCharactersUsecaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B9F285254D53560050D14B /* MarvelCharactersUsecaseTest.swift */; };
 		E5D449BA254A976B00718AEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D449B9254A976B00718AEC /* AppDelegate.swift */; };
 		E5D449C3254A976C00718AEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5D449C2254A976C00718AEC /* Assets.xcassets */; };
 		E5D449C6254A976C00718AEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5D449C4254A976C00718AEC /* LaunchScreen.storyboard */; };
@@ -130,6 +132,8 @@
 		E5997553254ABE9A004AF0D9 /* Keys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
 		E5997557254ABEC1004AF0D9 /* KeyUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyUtil.swift; sourceTree = "<group>"; };
 		E59975EE254AFC1A004AF0D9 /* DependenciesApplicationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependenciesApplicationService.swift; sourceTree = "<group>"; };
+		E5B9F27F254D530A0050D14B /* CharactersData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CharactersData.json; sourceTree = "<group>"; };
+		E5B9F285254D53560050D14B /* MarvelCharactersUsecaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelCharactersUsecaseTest.swift; sourceTree = "<group>"; };
 		E5D449B6254A976B00718AEC /* MarvelApiTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarvelApiTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5D449B9254A976B00718AEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E5D449C2254A976C00718AEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -314,6 +318,14 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		E5B9F27E254D52F40050D14B /* Jsons */ = {
+			isa = PBXGroup;
+			children = (
+				E5B9F27F254D530A0050D14B /* CharactersData.json */,
+			);
+			path = Jsons;
+			sourceTree = "<group>";
+		};
 		E5D449AD254A976B00718AEC = {
 			isa = PBXGroup;
 			children = (
@@ -359,8 +371,10 @@
 		E5D449CF254A976C00718AEC /* MarvelApiTestTests */ = {
 			isa = PBXGroup;
 			children = (
+				E5B9F27E254D52F40050D14B /* Jsons */,
 				E5D449D0254A976C00718AEC /* MarvelApiTestTests.swift */,
 				E5D449D2254A976C00718AEC /* Info.plist */,
+				E5B9F285254D53560050D14B /* MarvelCharactersUsecaseTest.swift */,
 			);
 			path = MarvelApiTestTests;
 			sourceTree = "<group>";
@@ -499,6 +513,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5B9F280254D530A0050D14B /* CharactersData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -670,6 +685,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5B9F286254D53560050D14B /* MarvelCharactersUsecaseTest.swift in Sources */,
 				E5D449D1254A976C00718AEC /* MarvelApiTestTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
