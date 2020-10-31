@@ -41,7 +41,7 @@ class MainScreenVMTests: XCTestCase {
         viewDidLoadDriver = vldPublisher.asDriver(onErrorJustReturn: ())
     }
     
-    func testLoading() {
+    func testLoading() throws {
         bag = DisposeBag()
         
         let scheduler = TestScheduler(initialClock: 0)
@@ -60,6 +60,39 @@ class MainScreenVMTests: XCTestCase {
 
         XCTAssertEqual(isLoadingResult.events, expected)
     }
+
+    func testData() throws {
+        bag = DisposeBag()
+        
+        let jsonData = self.jsonData(name: "CharactersData")
+        let objs = try JSONDecoder().decode(CharacterDataWrapper.self, from: jsonData!)
+        let characters = (objs.data!.results)!
+        
+        let scheduler = TestScheduler(initialClock: 0)
+        viewModel = getViewModel(scheduler: scheduler)
+        
+        let trigger = scheduler.createHotObservable([.next(0, ())])
+        let result = scheduler.createObserver([Character].self)
+        
+        let expected: [Recorded<Event<[Character]>>] = [.next(3, characters)]
+        
+        trigger.bind(to: vld).disposed(by: bag)
+        viewModel.bindViewDidLoad(viewDidLoadDriver)
+        viewModel.hasSucced?.drive(result).disposed(by: bag)
+        
+        scheduler.start()
+
+        XCTAssertNotNil(result.events.first)
+        XCTAssertEqual(result.events.count, expected.count)
+        XCTAssertNotNil(result.events.first?.value.element)
+        XCTAssertEqual(result.events.first?.value.element?.count,
+                       expected.first?.value.element?.count)
+        XCTAssertEqual(result.events.first?.value.element?.first?.id,
+                       expected.first?.value.element?.first?.id)
+        XCTAssertEqual(result.events.first?.value.element?.first?.name,
+                       expected.first?.value.element?.first?.name)
+        XCTAssertEqual(result.events.first?.value, expected.first?.value)
+    }
 }
 
 extension MainScreenVMTests {
@@ -72,5 +105,21 @@ extension MainScreenVMTests {
         viewModel.bindViewDidLoad(viewDidLoadDriver)
 
         return viewModel
+    }
+}
+
+extension MainScreenVMTests {
+    func jsonData(name: String) -> Data? {
+        guard let filepath = Bundle(for: MainScreenVMTests.self)
+            .url(forResource: name, withExtension: "json") else {
+            return nil
+        }
+
+        do {
+            let contents = try Data(contentsOf: filepath)
+            return contents
+        } catch {
+            return nil
+        }
     }
 }

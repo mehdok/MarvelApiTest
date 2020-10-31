@@ -40,6 +40,7 @@
 		E5B9F28A254D53A10050D14B /* NetworkModuleMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B9F289254D53A10050D14B /* NetworkModuleMock.swift */; };
 		E5B9F28C254D54070050D14B /* ApiClientMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B9F276254D49AD0050D14B /* ApiClientMock.swift */; };
 		E5B9F291254D54240050D14B /* EndPointExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B9F26E254D491C0050D14B /* EndPointExt.swift */; };
+		E5B9F29A254D65500050D14B /* CharactersData.json in Resources */ = {isa = PBXBuildFile; fileRef = E5B9F269254D48CA0050D14B /* CharactersData.json */; };
 		E5D44A32254A988E00718AEC /* NetworkLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5D44A28254A988E00718AEC /* NetworkLayer.framework */; };
 		E5D44A37254A988E00718AEC /* NetworkLayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D44A36254A988E00718AEC /* NetworkLayerTests.swift */; };
 		E5D44A39254A988E00718AEC /* NetworkLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = E5D44A2B254A988E00718AEC /* NetworkLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -381,6 +382,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5B9F29A254D65500050D14B /* CharactersData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

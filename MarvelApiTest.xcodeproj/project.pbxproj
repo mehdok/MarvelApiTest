@@ -45,6 +45,7 @@
 		E5B9F280254D530A0050D14B /* CharactersData.json in Resources */ = {isa = PBXBuildFile; fileRef = E5B9F27F254D530A0050D14B /* CharactersData.json */; };
 		E5B9F286254D53560050D14B /* MarvelCharactersUsecaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B9F285254D53560050D14B /* MarvelCharactersUsecaseTest.swift */; };
 		E5B9F294254D56530050D14B /* MainScreenVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B9F293254D56530050D14B /* MainScreenVMTests.swift */; };
+		E5B9F297254D650D0050D14B /* CharactersData.json in Resources */ = {isa = PBXBuildFile; fileRef = E5B9F27F254D530A0050D14B /* CharactersData.json */; };
 		E5D449BA254A976B00718AEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D449B9254A976B00718AEC /* AppDelegate.swift */; };
 		E5D449C3254A976C00718AEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5D449C2254A976C00718AEC /* Assets.xcassets */; };
 		E5D449C6254A976C00718AEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5D449C4254A976C00718AEC /* LaunchScreen.storyboard */; };
@@ -506,6 +507,7 @@
 				E5D449C6254A976C00718AEC /* LaunchScreen.storyboard in Resources */,
 				E5916758254BEB6A0050219F /* CharacterCell.xib in Resources */,
 				E5D449C3254A976C00718AEC /* Assets.xcassets in Resources */,
+				E5B9F297254D650D0050D14B /* CharactersData.json in Resources */,
 				E5916801254C28710050219F /* LoadingFooter.xib in Resources */,
 				E59974C0254A9FF3004AF0D9 /* MainScreenSB.storyboard in Resources */,
 				E591676D254BF6800050219F /* MessageLayer.xib in Resources */,

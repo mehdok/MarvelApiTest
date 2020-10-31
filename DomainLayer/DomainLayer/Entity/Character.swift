@@ -43,3 +43,9 @@ public struct Character: BaseEntity {
     /// A resource list of series in which this character appears.
     public let series: SeriesList?
 }
+
+extension Character: Equatable {
+    public static func == (lhs: Character, rhs: Character) -> Bool {
+        lhs.id == rhs.id
+    }
+}
