@@ -3,6 +3,8 @@ PODS:
   - Kingfisher (5.15.7):
     - Kingfisher/Core (= 5.15.7)
   - Kingfisher/Core (5.15.7)
+  - RxBlocking (5.1.1):
+    - RxSwift (~> 5)
   - RxCocoa (5.1.1):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
@@ -16,33 +18,41 @@ PODS:
   - RxRelay (5.1.1):
     - RxSwift (~> 5)
   - RxSwift (5.1.1)
+  - RxTest (5.1.1):
+    - RxSwift (~> 5)
 
 DEPENDENCIES:
   - Kingfisher (~> 5.15.7)
+  - RxBlocking (~> 5.1.1)
   - RxCocoa (~> 5.1.1)
   - RxDataSources (~> 4.0)
   - RxGesture (~> 3.0.2)
   - RxSwift (~> 5.1.1)
+  - RxTest (~> 5.1.1)
 
 SPEC REPOS:
   trunk:
     - Differentiator
     - Kingfisher
+    - RxBlocking
     - RxCocoa
     - RxDataSources
     - RxGesture
     - RxRelay
     - RxSwift
+    - RxTest
 
 SPEC CHECKSUMS:
   Differentiator: 886080237d9f87f322641dedbc5be257061b0602
   Kingfisher: 6e1a13523fcb1c86924ce53affe4ac957e544d59
+  RxBlocking: 5f700a78cad61ce253ebd37c9a39b5ccc76477b4
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
   RxDataSources: efee07fa4de48477eca0a4611e6d11e2da9c1114
   RxGesture: d6bd7447ca3a596c7a9702a6a2b6a2bb5d8bae54
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
+  RxTest: 711632d5644dffbeb62c936a521b5b008a1e1faa
 
-PODFILE CHECKSUM: dc7a57d66c204420a703eda10e5354858f59f3d8
+PODFILE CHECKSUM: ea61e52845a7d37631ac64f8d4bfaaefdfc7ec67
 
-COCOAPODS: 1.9.3
+COCOAPODS: 1.10.0
